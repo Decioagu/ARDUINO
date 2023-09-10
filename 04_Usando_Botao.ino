@@ -4,9 +4,10 @@
     * botão 2 => BNT_2 = 1s
 */
 
+// #define => Constante
 #define LED	7 // definir pino "7" Arduino (apelidar de LED)
 #define BTN_1 2 // definir pino "2" Arduino (apelidar de BTN_1)
-#define BTN_2 3 // definir pino "3" Arduino (apelidar de BTN_2)2
+#define BTN_2 3 // definir pino "3" Arduino (apelidar de BTN_2)
 int velocidade = 500; // variável 
 
 // ler um vez

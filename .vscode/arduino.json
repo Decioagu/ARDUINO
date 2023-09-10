@@ -1,3 +1,4 @@
 {
-    "sketch": "Pisca_Pisca.ino"
+    "sketch": "Pisca_Pisca.ino",
+    "board": "arduino:avr:uno"
 }

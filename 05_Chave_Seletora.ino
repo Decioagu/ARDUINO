@@ -3,7 +3,7 @@
     Acionam LED`s (Verde ou Vermelho) conforme posição de chave seletora (key switch)
 */
 
-
+// #define => Constante
 #define LED_VD 8 // definir pino "8" Arduino (apelidar de LED_VD)
 #define LED_VM 7 // definir pino "7" Arduino (apelidar de LED_VM)
 #define SW_D 3 // definir pino "3" Arduino (apelidar de SW_D)

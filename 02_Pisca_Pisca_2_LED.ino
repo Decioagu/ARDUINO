@@ -1,6 +1,7 @@
 // porta digital => ligar e desligar LED alternado (ledVermelho\ledAmarelo)
 
-#define ESPERA	500 // constante
+// #define => Constante
+#define ESPERA	500 // constante de valor 500
 
 int ledVermelho = 8; // definir pino "8" Arduino (apelidar de ledVermelho)
 int ledAmarelo = 7; // definir pino "7" Arduino (apelidar de ledAmarelo)
