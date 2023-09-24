@@ -5,11 +5,14 @@
     Exemplo (Display 7 seguimentos):
     B,PONTO,SEG_G,SEG_F,SEG_E,SEG_D,SEG_C,SEG_B,SEG_A
     B,0    ,0    ,0    ,0    ,0    ,0    ,0    ,0
+
+    "Inicie contagem e zere contagem" do display pressionando botão no "pino digital 11" do Arduino
+    "Avance contagem" do display pressionando o botão no "pino digital 1" do Arduino
+    "Retorne contagem" do display pressionando o botão no "pino digital 0" do Arduino
 */
 
 // -------------------------------------------------------------------------------------------------------- (1)
 
-// #define => Constante
 #define BOTAO_SUBTRAIR 0 // definir pino "0" Arduino (apelidar de BOTAO_SUBTRAIR)
 #define BOTAO_SOMAR 1 // definir pino "1" Arduino (apelidar de BOTAO_SOMAR)
 
@@ -126,9 +129,9 @@ void setup(){
       para a tensão de alimentação alto (HIGH) quando não está conectado a nada. Isso permite que você use um botão 
       para nível logico baixo (LOW) e controlar alguma condição.
   */
-  pinMode(BOTAO_SUBTRAIR, INPUT_PULLUP); // pino(porta, entrada)
-  pinMode(BOTAO_SOMAR, INPUT_PULLUP); // pino(porta, entrada)
-  pinMode(BOTAO_INICIAR, INPUT_PULLUP); // pino(porta, entrada)
+  pinMode(BOTAO_SUBTRAIR, INPUT_PULLUP);  // pino(porta, entrada)
+  pinMode(BOTAO_SOMAR, INPUT_PULLUP);     // pino(porta, entrada)
+  pinMode(BOTAO_INICIAR, INPUT_PULLUP);   // pino(porta, entrada)
 
   pinMode(SEG_A, OUTPUT); // pino(porta, saída)
   pinMode(SEG_B, OUTPUT); // pino(porta, saída)

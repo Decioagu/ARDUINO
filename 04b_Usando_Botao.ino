@@ -1,5 +1,5 @@
 /*
-    LED pisca em intensidade diferente precintando o botão 1 ou botão 2.
+    LED pisca em intensidade diferente pressionando o botão 1 ou botão 2.
     * botão 1 => BNT_1 = 0,1s
     * botão 2 => BNT_2 = 1s
 */
@@ -12,8 +12,8 @@ int velocidade = 500; // variável
 
 // ler um vez
 void setup() {
-	pinMode(BTN_1, INPUT); // pino(porta, entrada)
-	pinMode(BTN_2, INPUT); // pino(porta, entrada)
+    pinMode(BTN_1, INPUT); // pino(porta, entrada)
+    pinMode(BTN_2, INPUT); // pino(porta, entrada)
   	pinMode(LED, OUTPUT); // pino(porta, saída)
   
   	Serial.begin(9600); // taxa de transmissão de dados "9600 bits por segundo (bps)"

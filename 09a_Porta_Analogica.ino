@@ -1,10 +1,20 @@
+/*
+  Controle o numero de piscada do LED "L" embutido na placa do Arduino
+  por meio tensão aplicada na porta analógica A0 da placa Arduino,
+  com valores de tensão podendo ser acompanhado por Monitor Serial.
+  Sendo:
+  O valor 0 corresponde a uma tensão de 0 volts, e o valor 1023 corresponde a uma tensão de 5 volts.
+*/
+
 int sensorValue = 0; // variável 
 
 void setup()
 {
   // A0 = pino analógico
   pinMode(A0, INPUT);  // pino(porta, entrada)
-  pinMode(LED_BUILTIN, OUTPUT);  // definir o pino LED= "L" embutido como uma saída.
+
+  pinMode(LED_BUILTIN, OUTPUT);  // definir o pino LED= "L" embutido como uma saída
+
   Serial.begin(9600); // print no monitor serial
 }
 

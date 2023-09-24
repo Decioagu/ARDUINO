@@ -4,6 +4,8 @@
     Exemplo (Display 7 seguimentos):
     B,PONTO,SEG_G,SEG_F,SEG_E,SEG_D,SEG_C,SEG_B,SEG_A
     B,0    ,0    ,0    ,0    ,0    ,0    ,0    ,0
+
+  Inicie contagem e zere contagem do display pressionando botão no pino digital 11 do Arduino
 */
 
 // -------------------------------------------------------------------------------------------------------- (1)
@@ -112,6 +114,12 @@ void contar(){
 // -------------------------------------------------------------------------------------------------------- (2)
 
 void setup(){
+  /*    INPUT_PULLUP é um modo de pino digital no Arduino que usa um resistor interno para puxar o pino 
+      para a tensão de alimentação alto (HIGH) quando não está conectado a nada. Isso permite que você use um botão 
+      para nível logico baixo (LOW) e controlar alguma condição.
+  */  
+  pinMode(BOTAO_INICIAR, INPUT_PULLUP); // pino(porta, entrada)
+
   pinMode(SEG_A, OUTPUT); // pino(porta, saída)
   pinMode(SEG_B, OUTPUT); // pino(porta, saída)
   pinMode(SEG_C, OUTPUT); // pino(porta, saída)
@@ -122,12 +130,6 @@ void setup(){
 
   pinMode(DEZENA, OUTPUT); // pino(porta, saída)
   pinMode(UNIDADE, OUTPUT); // pino(porta, saída)
-
-/*    INPUT_PULLUP é um modo de pino digital no Arduino que usa um resistor interno para puxar o pino 
-      para a tensão de alimentação alto (HIGH) quando não está conectado a nada. Isso permite que você use um botão 
-      para nível logico baixo (LOW) e controlar alguma condição.
-*/  
-  pinMode(BOTAO_INICIAR, INPUT_PULLUP); // pino(porta, entrada)
 }
 
 // -------------------------------------------------------------------------------------------------------- (3)

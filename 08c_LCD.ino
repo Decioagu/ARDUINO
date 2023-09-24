@@ -1,9 +1,18 @@
+/*
+  Biblioteca LiquidCrystal
+
+  Demonstra o uso de um display LCD 16x2.
+  Digite qualquer letra em qualquer posição do display LCD 16x2
+  utilizando os botões CIMA, BAIXO, ESQUERDA, DIREITA, ESPAÇO.
+*/
+
 #include <LiquidCrystal.h>  // blibioteca LCD
 #define BTN_CIMA 4 // definir pino "4" Arduino (apelidar de BTN_CIMA)
 #define BTN_BAIXO 3 // definir pino "3" Arduino (apelidar de BTN_BAIXO)
 #define BTN_DIREITA 2 // definir pino "5" Arduino (apelidar de BTN_DIREITA)
 #define BTN_ESQUERDA 5 // definir pino "2" Arduino (apelidar de BTN_ESQUERDA)
 #define BTN_ESPACO 1 // definir pino "1" Arduino (apelidar de BTN_ESPACO)
+
 int letra = 64;  // variável (contador)
 int coluna = 0;  // variável (marca valor posição coluna)
 int linha = 0;   // variável (marca valor posição linha)
@@ -13,17 +22,20 @@ int linha = 0;   // variável (marca valor posição linha)
   LiquidCrystal lcd(6, 7, 8, 9, 10, 11);
   LiquidCrystal LCD(RS,  E, Dado, Dado, Dado, Dado);
 */
-LiquidCrystal lcd(6, 7, 8, 9, 10, 11); // 
+LiquidCrystal lcd(6, 7, 8, 9, 10, 11); // nomeia e instanciar LCD a ser utilizado
 
 void setup()
 {
   lcd.begin(16, 2); // LCD.begin(coluna, linha)
+
   pinMode(BTN_CIMA, INPUT_PULLUP); // pino(porta, entrada)
   pinMode(BTN_BAIXO, INPUT_PULLUP); // pino(porta, entrada)
   pinMode(BTN_DIREITA, INPUT_PULLUP); // pino(porta, entrada)
   pinMode(BTN_ESQUERDA, INPUT_PULLUP); // pino(porta, entrada)
   pinMode(BTN_ESPACO, INPUT_PULLUP); // pino(porta, entrada)
+
   lcd.blink(); // pisca cursor na posição atual
+  
   lcd.setCursor(coluna, linha); // inicio de posição do cursor ao iniciar loop
 }
 

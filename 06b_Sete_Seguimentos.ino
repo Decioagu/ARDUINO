@@ -65,6 +65,6 @@ void setup(){
 void loop(){  
   for (int i = 0; i <= 9; i++) {
   	mostrarNumero(i);
-  	delay(1000);
+  	delay(1500);
   }
 }

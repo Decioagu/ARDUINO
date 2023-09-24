@@ -1,13 +1,13 @@
 /*
-Biblioteca LiquidCrystal - Olá Mundo
+  Biblioteca LiquidCrystal
 
-    Demonstra o uso de um display LCD 16x2.
-   A biblioteca LiquidCrystal funciona com todos os LCD
-   monitores compatíveis com o Hitachi
-   Interface de 16 pinos.
+  Demonstra o uso de um display LCD 16x2.
+  A biblioteca LiquidCrystal funciona com todos os LCD
+  monitores compatíveis com o Hitachi
+  Interface de 16 pinos.
 
-   Este esboço imprime "Hello World!" para o LCD
-   e mostra a hora.
+  Este esboço imprime "Hello World!" para o LCD
+  e mostra a hora.
 
   O circuito:
    * LCD RS pino para pino digital 12 (Arduino)
@@ -29,11 +29,11 @@ Biblioteca LiquidCrystal - Olá Mundo
   LiquidCrystal LCD(12, 11, 5, 4, 3, 2);
   LiquidCrystal LCD(RS,  E, Dado, Dado, Dado, Dado);
 */
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2); // nomeia e instanciar LCD a ser utilizado
 
 void setup() {
   // definição do LCD: inicializará um LCD de 16x2
-  LCD.begin(16, 2); // LCD.begin(coluna, linha)
+  lcd.begin(16, 2); // LCD.begin(coluna, linha)
   
   lcd.print("Decio Santana de Aguiar"); // mensagem
 }
