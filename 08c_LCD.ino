@@ -28,6 +28,10 @@ void setup()
 {
   lcd.begin(16, 2); // LCD.begin(coluna, linha)
 
+  /*  INPUT_PULLUP é um modo de pino digital no Arduino que usa um resistor interno para puxar o pino 
+      para a tensão de alimentação alto (HIGH) quando não está conectado a nada. Isso permite que você use um botão 
+      para nível logico baixo (LOW) e controlar alguma condição.
+  */
   pinMode(BTN_CIMA, INPUT_PULLUP); // pino(porta, entrada)
   pinMode(BTN_BAIXO, INPUT_PULLUP); // pino(porta, entrada)
   pinMode(BTN_DIREITA, INPUT_PULLUP); // pino(porta, entrada)

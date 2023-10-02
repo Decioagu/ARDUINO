@@ -1,3 +1,11 @@
+/*
+    TRAVA é um circuito de seguração veicular que consiste em uma BALANÇA e um CHAVE DE APROXIMAÇÃO.
+    Para sua ativação é necessário duas condições:
+    BALANÇA deve possuir um peso e CHAVE DE APROXIMAÇÃO deve esta afastada.
+    Neste projeto tanto a BALANÇA como CHAVE DE APROXIMAÇÃO,
+  esta sendo representadas por chave seletora (key switch).
+*/
+
 #include <LiquidCrystal.h>  // blibioteca LCD
 
 #define RELER_TRAVA A0	// definir pino "A0" Arduino (apelidar de RELER_TRAVA)
